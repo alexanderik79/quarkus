@@ -1,7 +1,18 @@
 greeting:
   message: "hello"
 
+#quarkus:
+#  datasource:
+#    jdbc.url: jdbc:postgresql://localhost:5432/employee2
+#    ssl: false
+
 quarkus:
+  hibernate-orm:
+    database:
+      generation: update
   datasource:
-    jdbc.url: jdbc:postgresql://localhost:5432/employee
-    ssl: false
+    db-kind: postgresql
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/employee2
